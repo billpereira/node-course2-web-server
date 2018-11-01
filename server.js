@@ -2,6 +2,8 @@ const express = require('express');
 const hbs = require('hbs');
 const os = require('os');
 const fs = require('fs');
+const port = process.env.PORT || 3000;
+
 
 
 var user = os.userInfo();
@@ -50,8 +52,8 @@ app.get('/bad',(req,res)=>{
     });
 });
 
-app.listen(3000,()=>{
-    console.log('Server is up and running on port 3000');
+app.listen(port,()=>{
+    console.log(`Server is up and running on port ${port}`);
 });
 
 
