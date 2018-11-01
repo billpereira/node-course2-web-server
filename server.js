@@ -45,6 +45,13 @@ app.get('/about',(req,res)=>{
         // currentYear: year
     })
 });
+app.get('/portfolio',(req,res)=>{
+    res.render('portfolio.hbs',{
+        pageTitle:'Portfolio PAge',
+        welcomeMessage:`Hello ${user.username}, welcome to our Home Page!`
+        // currentYear: year
+    })
+});
 
 app.get('/bad',(req,res)=>{
     res.send({
